@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">        <!-- comando que importa para o HTML tudo que foi codado em CSS -->
+    <script src="script.js"></script>               <!-- comando que importa tudo que foi codado em JavaScript -->
+    <title>Previsão do Tempo</title>        <!-- mensagem que aparece na aba do guia do navegador -->
+</head>
+
+<body>
+    <div class="big-box">
+        <input class="input-cidade" placeholder="Digite o nome da cidade">
+        <!-- placeholder é a mensagem de texto que aparece antes que o usuário digite algo -->
+        <button class="botao-buscar" onclick="cliqueiNoBotao()">        <!-- "onclick" é um comando que permite uma ação após o clique -->
+            <img class="img-buscar" src="https://www.svgrepo.com/show/488200/find.svg" alt="Buscar">    <!-- importando um ícone para a busca -->
+        </button>
+        <div class="middle-box">
+            <h2 class="cidade">Rio de Janeiro</h2>
+
+            <p class="temp">21ºC</p>
+
+            <div class="small-box">
+                <img class="img-prevision" src="https://openweathermap.org/img/wn/04n.png" alt="icone-info-tempo">  <!-- importando um ícone para o indicador de tempo -->
+                <p class="text-prevision">Nublado</p>
+            </div>
+            <p class="moisture">Umidade: 70%</p>
+        </div>
+    </div>
+</body>
+
+</html>
