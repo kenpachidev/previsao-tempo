@@ -13,27 +13,25 @@ body{
     display: flex;
     justify-content: center;        /* comando que define o alinhamento horizontal */
     align-items: center;            /* comando que define o alinhamento vertical */
-    background-image: url("https://source.unsplash.com/2100x1800/?landscape");
+    background-image: url("https://images.unsplash.com/photo-1743653537429-a94889a6fd47?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
-.big-box{
-    background: black;
-    opacity: 0.6;
-    border-radius: 25px;
+.big-box{             /* o r=red g=green b=blue a=alpha, sendo o alpha definindo a porcentagem de opacidade (de 0 a 1) */
+    background: rgba(0, 0, 0, 0.2); /* fundo preto com 60% de opacidade*/
+    border-radius: 25px;    /* arredondamento das bordas */
     padding: 20px;
     width: 95%;
     max-width: 450px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(4px); /* filtro para embaçar imagem que aparece na transparência da box */
 }
 
 .input-cidade{
     border: none;
     outline: none;
     padding: 10px;
-    border-radius: 25px;
+    border-radius: 25px;    /* arredondamento das bordas */
     font-size: 18px;
-    background-color: white;
-    opacity: 0.3;
+    background-color: rgba(255, 255, 255, 0.1); /* o r=red g=green b=blue a=alpha, sendo o alpha definindo a porcentagem de opacidade (de 0 a 1) */
     color: white;
     width: calc(100% - 55px);
 }
@@ -43,14 +41,14 @@ body{
     outline: none;
     padding: 10px;
     border-radius: 50px;
-    background-color: white;
-    opacity: 0.2;
+    background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
     float: right;
 }
 
 .img-buscar{
     width: 20px;
+    padding-top: 2px;   /* aplicando espaço entre a imagem da lupa e a parte superior da borda */
 }
 
 .middle-box{
@@ -76,13 +74,27 @@ body{
     margin-top: 20px;
 }
 
+.img-prevision{
+    margin-left: -8px;
+}
+
 .text-prevision{
     color: white;
     margin-left: 20x;
     text-transform: capitalize;
 }
 
+.img-buscar{
+    filter:brightness(0) invert(1)  /* filtro para alterar a cor real da imagem (preta), convertendo-a para branca*/
+}
+
 .moisture{
     color: white;
     margin-top: 20px;
+}
+
+@media (max-width: 768px){  /* código para ajustar a imagem do background sempre para o centro na versão mobile (responsivo) */
+    body{
+        background-position: center center;
+    }
 }
